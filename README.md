@@ -1,10 +1,12 @@
-## News App Flutter [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/FLUTTER_NewsApp?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%FLUTTER_NewsApp) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/FLUTTER_NewsApp?style=social) 
+## News App Flutter [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%Flutter_News_App_Using_GetX_MVC) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)
 
 A Simple News App built with Flutter. In this app, there is a Home page, which will display top news from newsapi.org. News categories range from tech to entertainment. You can choose the news category displayed on the category page. The app provides a smooth and amazing design with gestures effect and a smooth experience with the android and iOS platforms.
 
- ## Todos
+## Todos
 
 - [x] Sound null safety
+- [x] [GetX](https://pub.dev/packages/get)
+- [x] MVC pattern
 - [x] News Home page
 - [x] Live News
 - [x] Select news category page
@@ -13,9 +15,10 @@ A Simple News App built with Flutter. In this app, there is a Home page, which w
 - [x] Beautiful UI with Dual themes ie. Light Theme and Dark Theme
 - [x] Fetch news from api
 - [x] Parse complicated JSON.
-- [x] Find With Keyword
+- [x] Find News With Keywords
 - [x] Display full news detail
 
+[Without GetX Project](https://github.com/j-j-gajjar/FLUTTER_NewsApp)
 
 <hr/>
 
@@ -56,21 +59,6 @@ A Simple News App built with Flutter. In this app, there is a Home page, which w
             </tr>
         </table>
 
-
 ## Pull Requests
 
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request.
-
-
-<hr/>
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
