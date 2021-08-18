@@ -1,0 +1,25 @@
+name: newsappflutter
+description: A new Flutter application.
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^0.13.1
+  webview_flutter: ^2.0.2
+  get: ^4.3.8
+  cached_network_image:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
