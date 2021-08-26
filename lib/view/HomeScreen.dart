@@ -85,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            index == controller.news.length - 1 && controller.isLoading ? Center(child: CircularProgressIndicator()) : SizedBox(),
+                            index == controller.news.length - 1 && controller.isLoading == true ? Center(child: CircularProgressIndicator()) : SizedBox(),
                           ],
                         );
                       },
