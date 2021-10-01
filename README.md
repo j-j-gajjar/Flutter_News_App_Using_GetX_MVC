@@ -1,4 +1,4 @@
-## Flutter News App With Getx and MVC [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%Flutter_News_App_Using_GetX_MVC) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)
+## Flutter News App With Getx & MVC [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%Flutter_News_App_Using_GetX_MVC) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)
 
 A Simple News App built with Flutter. In this app, there is a Home page, which will display top news from newsapi.org. News categories range from tech to entertainment. You can choose the news category displayed on the category page. The app provides a smooth and amazing design with gestures effect and a smooth experience with the android and iOS platforms.
 
@@ -6,17 +6,17 @@ A Simple News App built with Flutter. In this app, there is a Home page, which w
 
 - [x] Sound null safety
 - [x] [GetX](https://pub.dev/packages/get)
-- [x] MVC pattern
+- [x] MVC patterns
 - [x] News Home page
 - [x] Live News
 - [x] Select news category page
 - [x] Live News
 - [x] Sort By Category | Country | News Channel
 - [x] Beautiful UI with Dual themes ie. Light Theme and Dark Theme
-- [x] Fetch news from api
+- [x] Fetch news from API.
 - [x] Parse complicated JSON.
-- [x] Find News With Keywords
-- [x] Display full news detail
+- [x] Find News with Keywords.
+- [x] Display full news with full details.
 
 [Without GetX Project](https://github.com/j-j-gajjar/FLUTTER_NewsApp)
 
