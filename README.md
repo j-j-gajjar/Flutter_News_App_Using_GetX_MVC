@@ -1,4 +1,4 @@
-## News App Flutter [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%Flutter_News_App_Using_GetX_MVC) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)
+## Flutter News App With Getx & MVC [![GitHub stars](https://img.shields.io/github/stars/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)](https://github.com/login?return_to=%2Fj-j-gajjar%Flutter_News_App_Using_GetX_MVC) ![GitHub forks](https://img.shields.io/github/forks/j-j-gajjar/Flutter_News_App_Using_GetX_MVC?style=social)
 
 A Simple News App built with Flutter. In this app, there is a Home page, which will display top news from newsapi.org. News categories range from tech to entertainment. You can choose the news category displayed on the category page. The app provides a smooth and amazing design with gestures effect and a smooth experience with the android and iOS platforms.
 
