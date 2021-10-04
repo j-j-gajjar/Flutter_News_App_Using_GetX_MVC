@@ -72,9 +72,16 @@ class HomeScreen extends StatelessWidget {
                                                   ),
                                                 ),
                                           Positioned(
-                                            bottom: 10,
-                                            right: 20,
-                                            child: Text("${controller.news[index].source.name}", style: TextStyle(color: Colors.red)),
+                                            bottom: 8,
+                                            right: 8,
+                                            child: Card(
+                                              elevation: 0,
+                                              color: Theme.of(context).primaryColor.withOpacity(0.8),
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                                                child: Text("${controller.news[index].source.name}", style: Theme.of(context).textTheme.subtitle2),
+                                              ),
+                                            ),
                                           ),
                                         ]),
                                         Divider(),
@@ -85,7 +92,9 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            index == controller.news.length - 1 && controller.isLoading == true ? Center(child: CircularProgressIndicator()) : SizedBox(),
+                            index == controller.news.length - 1 && controller.isLoading == true
+                                ? Center(child: CircularProgressIndicator())
+                                : SizedBox(),
                           ],
                         );
                       },

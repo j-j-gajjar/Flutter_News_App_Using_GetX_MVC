@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final news = newsFromJson(jsonString);
-
 import 'package:newsappflutter/model/SourceModel.dart';
 
 class Article {
