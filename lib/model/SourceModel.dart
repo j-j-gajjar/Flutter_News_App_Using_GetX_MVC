@@ -1,9 +1,14 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'SourceModel.g.dart';
+
+@JsonSerializable()
 class Source {
-  Source({required this.id, required this.name});
+  Source({this.id = '', required this.name});
 
-  final String id;
-  final String name;
+  String? id, name;
 
-  factory Source.fromJson(Map<String, dynamic> json) =>
-      Source(id: json["id"] == null ? '' : json["id"], name: json["name"] == null ? '' : json["name"]);
+  factory Source.fromJson(Map<String, dynamic> json) => _$SourceFromJson(json);
+
+  Map<String, dynamic> toJson() => _$SourceToJson(this);
 }
