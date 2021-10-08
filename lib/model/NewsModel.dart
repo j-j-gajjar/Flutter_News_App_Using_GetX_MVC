@@ -1,19 +1,18 @@
 import 'dart:convert';
+import 'package:json_annotation/json_annotation.dart';
+import 'ArticalModel.dart';
 
-import 'package:newsappflutter/model/ArticalModel.dart';
+part 'NewsModel.g.dart';
 
+@JsonSerializable(explicitToJson: true)
 class NewsModel {
-  NewsModel({required this.status, required this.totalResults, required this.articles});
+  NewsModel(this.status, this.totalResults, this.articles);
 
-  final String status;
-  final int totalResults;
-  final List<Article> articles;
+  String status;
+  int totalResults;
+  List<Article> articles;
 
-  factory NewsModel.newsFromJson(String str) => NewsModel.fromJson(json.decode(str));
+  factory NewsModel.newsFromJson(String str) => _$NewsModelFromJson(json.decode(str));
 
-  factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
-        status: json["status"] == null ? null : json["status"],
-        totalResults: json["totalResults"] == null ? null : json["totalResults"],
-        articles: json["articles"] == [] ? [] : List<Article>.from(json["articles"].map((x) => Article.fromJson(x))),
-      );
+  factory NewsModel.fromJson(Map<String, dynamic> json) => _$NewsModelFromJson(json);
 }

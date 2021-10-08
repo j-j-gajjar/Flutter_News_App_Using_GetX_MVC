@@ -90,7 +90,7 @@ class NewsController extends GetxController {
         } else {
           if (newsData.articles.length != 0) {
             news = newsData.articles;
-            scrollController.jumpTo(0.0);
+            if (scrollController.hasClients) scrollController.jumpTo(0.0);
             update();
           }
         }

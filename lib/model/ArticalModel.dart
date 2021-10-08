@@ -1,34 +1,17 @@
-import 'package:newsappflutter/model/SourceModel.dart';
+import 'package:json_annotation/json_annotation.dart';
+import 'SourceModel.dart';
 
+part 'ArticalModel.g.dart';
+
+@JsonSerializable(explicitToJson: true)
 class Article {
-  Article({
-    required this.source,
-    required this.author,
-    required this.title,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-    required this.publishedAt,
-    required this.content,
-  });
+  Article(this.source, this.author, this.title, this.description, this.url, this.urlToImage, this.publishedAt, this.content);
 
-  final Source source;
-  final String author;
-  final String title;
-  final String description;
-  final String url;
-  final String urlToImage;
-  final String publishedAt;
-  final String content;
+  String? author, description, urlToImage, content;
+  String title, url, publishedAt;
+  Source source;
 
-  factory Article.fromJson(Map<String, dynamic> json) => Article(
-        source: Source.fromJson(json["source"]),
-        author: json["author"] == null ? '' : json["author"],
-        title: json["title"] == null ? '' : json["title"],
-        description: json["description"] == null ? '' : json["description"],
-        url: json["url"] == null ? '' : json["url"],
-        urlToImage: json["urlToImage"] == null ? '' : json["urlToImage"],
-        publishedAt: json["publishedAt"] == null ? '' : json["publishedAt"],
-        content: json["content"] == null ? '' : json["content"],
-      );
+  factory Article.fromJson(Map<String, dynamic> json) => _$ArticleFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ArticleToJson(this);
 }

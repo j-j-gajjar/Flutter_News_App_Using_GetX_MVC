@@ -61,14 +61,14 @@ class HomeScreen extends StatelessWidget {
                                     child: Column(
                                       children: [
                                         Stack(children: [
-                                          controller.news[index].urlToImage == ''
+                                          controller.news[index].urlToImage == null
                                               ? Container()
                                               : ClipRRect(
                                                   borderRadius: BorderRadius.circular(20),
                                                   child: CachedNetworkImage(
                                                     placeholder: (context, url) => Container(child: CircularProgressIndicator()),
                                                     errorWidget: (context, url, error) => Icon(Icons.error),
-                                                    imageUrl: controller.news[index].urlToImage,
+                                                    imageUrl: controller.news[index].urlToImage ?? '',
                                                   ),
                                                 ),
                                           Positioned(
@@ -92,9 +92,7 @@ class HomeScreen extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            index == controller.news.length - 1 && controller.isLoading == true
-                                ? Center(child: CircularProgressIndicator())
-                                : SizedBox(),
+                            index == controller.news.length - 1 && controller.isLoading == true ? Center(child: CircularProgressIndicator()) : SizedBox(),
                           ],
                         );
                       },
