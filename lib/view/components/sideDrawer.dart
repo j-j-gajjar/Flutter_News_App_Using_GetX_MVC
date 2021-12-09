@@ -4,7 +4,7 @@ import 'package:newsappflutter/contoller/NewsController.dart';
 import 'package:newsappflutter/model/utils.dart';
 import 'package:newsappflutter/view/components/dropDownList.dart';
 
-Drawer sideDrawer(newsController) {
+Drawer sideDrawer(NewsController newsController) {
   return Drawer(
     child: ListView(
       padding: EdgeInsets.symmetric(vertical: 60),
@@ -15,9 +15,13 @@ Drawer sideDrawer(newsController) {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  controller.cName != '' ? Text("Country = ${controller.cName}") : Container(),
+                  controller.cName != ''
+                      ? Text("Country = ${controller.cName.value}")
+                      : Container(),
                   SizedBox(height: 10),
-                  controller.category != '' ? Text("Country = ${controller.category}") : Container(),
+                  controller.category != ''
+                      ? Text("Country = ${controller.category.value}")
+                      : Container(),
                   SizedBox(height: 20),
                 ],
               );
@@ -35,7 +39,7 @@ Drawer sideDrawer(newsController) {
                     decoration: InputDecoration(hintText: "Find Keyword"),
                     scrollPadding: EdgeInsets.all(5),
                     onChanged: (val) {
-                      newsController.findNews = val;
+                      newsController.findNews.value = val;
                       newsController.update();
                     },
                   ),
@@ -44,7 +48,8 @@ Drawer sideDrawer(newsController) {
               MaterialButton(
                 child: Text("Find"),
                 onPressed: () async {
-                  newsController.getNews(searchKey: newsController.findNews);
+                  newsController.getNews(
+                      searchKey: newsController.findNews.value);
                 },
               ),
             ],
@@ -56,8 +61,9 @@ Drawer sideDrawer(newsController) {
             for (int i = 0; i < listOfCountry.length; i++)
               dropDownList(
                 call: () {
-                  newsController.country = listOfCountry[i]['code'];
-                  newsController.cName = listOfCountry[i]['name']!.toUpperCase();
+                  newsController.country.value = listOfCountry[i]['code']!;
+                  newsController.cName.value =
+                      listOfCountry[i]['name']!.toUpperCase();
                   newsController.getNews();
                   // newsController.update();
                 },
@@ -71,7 +77,7 @@ Drawer sideDrawer(newsController) {
             for (int i = 0; i < listOfCategory.length; i++)
               dropDownList(
                   call: () {
-                    newsController.category = listOfCategory[i]['code'];
+                    newsController.category.value = listOfCategory[i]['code']!;
                     newsController.getNews();
                     // newsController.update();
                   },
