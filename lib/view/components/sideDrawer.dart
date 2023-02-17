@@ -20,7 +20,7 @@ Drawer sideDrawer(NewsController newsController) {
                       : Container(),
                   SizedBox(height: 10),
                   controller.category != ''
-                      ? Text("Country = ${controller.category.value}")
+                      ? Text("Category = ${controller.category.value}")
                       : Container(),
                   SizedBox(height: 20),
                 ],
